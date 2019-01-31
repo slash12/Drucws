@@ -1,0 +1,7 @@
+hello_two.content:
+  path: '/hello/two'
+  defaults:
+    _controller: '\Drupal\hello_two\Controller\HelloTwoController::content'
+    _title: 'Hello World Two'
+  requirements:
+    _permission: 'access content'

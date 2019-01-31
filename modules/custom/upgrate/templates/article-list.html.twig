@@ -1,0 +1,27 @@
+<h4>
+    {{ title }}
+</h4>
+
+<a href="{{ path('upgrate_controller.article_create') }}"> Create Article </a>
+
+<table>
+    <th>Article id</th>
+    <th>Title</th>
+    <th>Body</th>
+    <th>Action</th>
+    {% for item in article %}
+        <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.title }}</td>
+            <td>{{ item.body }}</td>
+
+            {% if item.id != 0 %}
+                <td>
+                    <a href="{{ path('upgrate.update_article_form', { 'id': item.id }) }}">Update</a>
+                    <a href="{{ path('upgrate_controller.article_delete', { 'id': item.id }) }}">Delete</a>
+                </td> 
+            {% endif %}
+            
+        </tr>
+    {% endfor %}
+</table>

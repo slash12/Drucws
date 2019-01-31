@@ -1,0 +1,16 @@
+<?php
+/**
+ * Implmementing hook_theme().
+ */
+function upgrate_theme($existing, $type, $theme, $path)
+{
+  return [
+    'article_list' => [
+      'variables' => 
+        [
+          'article' => [], 
+          'title' => ''
+        ]
+      ]
+    ];
+}

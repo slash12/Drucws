@@ -1,0 +1,5 @@
+name: Upgrate Module
+description: Used to upload and save and migrate.
+package: Custom
+type: module
+core: 8.x

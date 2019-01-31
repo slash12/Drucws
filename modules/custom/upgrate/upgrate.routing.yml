@@ -1,0 +1,58 @@
+upgrate_form:
+  path: '/admin/config/upgrate/adminsettings'  
+  defaults:  
+    _form: '\Drupal\upgrate\Form\UpgrateForm'  
+    _title: 'UpgrateForm'  
+  requirements:  
+    _permission: 'access administration pages'  
+  options:  
+    _admin_route: TRUE  
+
+test_form:
+  path: '/admin/config/upgrate/api/adminsettings'
+  defaults:
+    _title: 'Test form'
+    _form: '\Drupal\upgrate\Form\TestForm'
+  requirements:
+    _permission: 'access administration pages'
+
+upgrate_controller.article_list:
+  path: '/upgrate/articles/view'
+  defaults:
+    _controller: '\Drupal\upgrate\Controller\ArticleController::ViewArticle'
+    _title: 'Our custom Article List'
+  requirements:
+    _permission: 'access content'
+
+upgrate_controller.article_create:
+  path: '/upgrate/articles/create'
+  defaults:
+    _title: 'Create Article'
+    _form: '\Drupal\upgrate\Form\CreateArticleForm'
+  requirements:
+    _permission: 'access content'
+
+upgrate_controller.article_delete:
+  path: '/upgrate/articles/delete/{id}'
+  defaults:
+    _title: 'Delete Article'
+    _controller: '\Drupal\upgrate\Controller\ArticleController::DeleteArticle'
+  requirements:
+    _permission: 'access content'
+
+upgrate_controller.single_article_list:
+  path: '/upgrate/article/view/{id}'
+  defaults:
+    _title: 'Delete Article'
+    _form: '\Drupal\upgrate\Form\UpdateArticleForm'
+  requirements:
+    _permission: 'access content'
+
+upgrate.update_article_form:
+  path: '/upgrate/form/update_article/{id}'
+  defaults:
+    _form: '\Drupal\upgrate\Form\UpdateArticleForm'
+    _title: 'Update Article Form'
+  requirements:
+    _access: 'TRUE'
+  

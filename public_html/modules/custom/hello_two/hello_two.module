@@ -1,0 +1,29 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function hello_two_help($route_name, RouteMatchInterface $route_match) 
+{
+  switch ($route_name) 
+  {
+    // Main module help for the hello_two module.
+    // help/hello_two
+    case 'help.page.hello_two':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome hello two Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function hello_two_page_alter(&$page)
+{
+    // Remove the "powered by Drupal" block
+    // unset($page['footer']['system_powered-by']);
+    dpm($page);
+}

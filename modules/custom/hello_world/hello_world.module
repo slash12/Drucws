@@ -1,0 +1,69 @@
+<?php
+/**
+ * @file
+ * Initial example of alter functions.
+ */
+
+// use Drupal\Core\Routing\RouteMatchInterface;
+// use Symfony\Component\HttpFoundation\RedirectResponse;
+// use Drupal\Core\Url;
+// use Drupal\Core\Block\BlockPluginInterface;
+// use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_help().
+ */
+// function hello_world_help($route_name, RouteMatchInterface $route_match) {
+//   switch ($route_name) {
+//     // Main module help for the hello_world module.
+//     case 'help.page.hello_world':
+//       $output = '';
+//       $output .= '<h3>' . t('About') . '</h3>';
+//       $output .= '<p>' . t('My Awesome hello world Module') . '</p>';
+//       return $output;
+
+//     default:
+//   }
+// }
+
+// function hello_world_user_login($account)
+// {
+//   $url = Url::fromRoute('<front>');
+//   $new_url = new RedirectResponse($url->toString());
+//   $new_url->send();
+// }
+
+// function hello_world_page_bottom(array &$page_bottom)
+// {
+//   $page_bottom['hello_world'] = [
+//     '#markup' => 'This is the bottom of the page',
+//   ];
+// }
+
+// function hello_world_page_top(array &$page_top)
+// {
+//   $page_top['hello_world'] =[
+//     '#markup' => 'This is page top',
+//   ];
+// }
+
+// function hello_world_form_alter(&$form, FormStateInterface $form_state, $form_id)
+// {
+//   dpm($form_id);
+//   ksm($form);
+
+//   $form['hello_world_message']['#description'] = "This is a test hoook description";
+//   $form['hello_world_message']['#title'] = "This is a title message";
+//   $form['hello_world_message']['#default_value'] = "This is a default message";
+//   $form['hello_world_message']['#required'] = true;
+
+  // $form['hello_world_'] = [  
+  //   '#type' => 'textfield',  
+  //   '#title' => 'Welcome message',  
+  //   '#description' => 'Welcome message display to users when they login',     
+  //   ]; 
+// }
+
+
+
+

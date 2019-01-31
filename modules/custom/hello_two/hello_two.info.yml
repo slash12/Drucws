@@ -1,0 +1,6 @@
+name: Hello World two Module
+description: Creates a page showing "Hello World two".
+package: Custom
+
+type: module
+core: 8.x
