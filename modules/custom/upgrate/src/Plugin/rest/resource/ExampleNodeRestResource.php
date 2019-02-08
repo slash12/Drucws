@@ -148,6 +148,7 @@ class ExampleNodeRestResource extends ResourceBase
 
             $response = new ResourceResponse($data);
             $response->addCacheableDependency($data);
+            \Drupal::service('page_cache_kill_switch')->trigger();
             return $response;
 
             \Drupal::logger('upgrate')->error('numeric');
@@ -179,6 +180,7 @@ class ExampleNodeRestResource extends ResourceBase
             // In order to generate fresh result every time (without clearing 
             // the cache), you need to invalidate the cache.
             $response->addCacheableDependency($data);
+            \Drupal::service('page_cache_kill_switch')->trigger();
             return $response;
 
             \Drupal::logger('upgrate')->error('not numeric');
